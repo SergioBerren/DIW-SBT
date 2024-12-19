@@ -1,0 +1,19 @@
+#idDivSeccion1 {
+    background-color: yellow;
+    .seccion {
+        background-color: purple;
+    }
+}
+
+#idDivSeccion2 {
+    background-color: red;
+    .seccion {
+        background-color: orange;
+    }
+}
+
+.seccion {
+    display: inline-block;
+    height: 350px;
+    width: 25%;
+}

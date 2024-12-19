@@ -1,0 +1,61 @@
+.encabezado {
+  background-color: blue;
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+.encabezado div {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../../img/pokeball.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 2;
+}
+.encabezado .linea {
+  background-color: yellowgreen;
+  display: inline-block;
+}
+
+.navegador {
+  background-color: green;
+}
+.navegador li {
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  width: 33%;
+}
+
+#idDiv1 {
+  background-color: red;
+  height: 100px;
+  width: 50%;
+}
+
+#idDiv2 {
+  background-color: blue;
+  height: 100px;
+  width: 50%;
+}
+
+#idDiv3 {
+  background-color: yellow;
+  height: 100px;
+  width: 50%;
+}
+
+.pie {
+  background-color: aqua;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}/*# sourceMappingURL=estilos2.css.map */

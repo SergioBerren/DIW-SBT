@@ -1,0 +1,41 @@
+body {
+  background-color: black;
+  margin: 0;
+  height: 100vh;
+  position: relative;
+}
+
+.encabezado {
+  background-color: white;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.encabezado h1 {
+  color: blue;
+}
+
+.contenido {
+  background-color: white;
+  width: 25%;
+  border-radius: 20px;
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contenido h2 {
+  color: grey;
+}
+
+.boton {
+  background-color: black;
+}
+.boton:hover {
+  background-color: red;
+}/*# sourceMappingURL=estilos.css.map */

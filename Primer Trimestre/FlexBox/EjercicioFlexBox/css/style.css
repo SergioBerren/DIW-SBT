@@ -1,0 +1,194 @@
+/*Especifico el tamaño de los contenedores de cada cara*/
+#idContenedorRojo, #idContenedorAmarillo {
+    background-color: white;
+    height: 900px;
+    width: 50%;
+}
+
+/*Propiedades divs de dentro del contenedor rojo y amarillo (columnas)*/
+#idContenedorRojo > div, #idContenedorAmarillo > div {
+    height: 4%;
+    width: 100%;
+}
+
+/*Propiedades de las cajas de dentro de cada fila, en clases separadas pongo el ancho*/
+#idContenedorRojo > div > div, #idContenedorAmarillo > div > div {
+    height: 100%;
+}
+
+/*Contenedor de los contenedores*/
+#idContenedor {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*Filas de deadpool*/
+#idContenedorRojo > div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/*Filas lobezno*/
+#idContenedorAmarillo > div {
+    display: flex;
+    flex-direction: row;
+}
+
+/*Clases cara de deadpool y lobezno (colores)*/
+.rojo {
+    background-color: red;
+}
+.blanco {
+    background-color: white;
+}
+.negro {
+    background-color: black;
+}
+.amarillo {
+    background-color: yellow;
+}
+
+/*Clases que definen el ancho de los divs*/
+.claseMargen105{
+    width: 1.5%;
+}
+.claseMargen415 {
+    width: 41.5%;
+}
+.claseMargen1{
+    width: 1%;
+}
+
+.claseMargen2{
+    width: 2%;
+}
+
+.claseMargen3{
+    width: 3%;
+}
+
+.claseMargen4{
+    width: 4%;
+}
+
+.claseMargen5 {
+    width: 5%;
+}
+
+.claseMargen6{
+    width: 6%;
+}
+
+.claseMargen7 {
+    width: 7%;
+}
+
+.claseMargen8 {
+    width: 8%;
+}
+
+.claseMargen9 {
+    width: 9%;
+}
+
+.claseMargen10 {
+    width: 10%;
+}
+
+.claseMargen12 {
+    width: 12%;
+}
+
+.claseMargen11 {
+    width: 11%;
+}
+
+.claseMargen13{
+    width: 13%;
+}
+
+.claseMargen14 {
+    width: 14%;
+}
+
+.claseMargen15 {
+    width: 15%;
+}
+
+.claseMargen16{
+    width: 16%;
+}
+
+.claseMargen17{
+    width: 17%;
+}
+
+.claseMargen19 {
+    width: 19%;
+}
+
+.claseMargen20 {
+    width: 20%;
+}
+
+.claseMargen22 {
+    width: 22%;
+}
+
+.claseMargen23 {
+    width: 23%;
+}
+
+.claseMargen24{
+    width: 24%;
+}
+
+.claseMargen25 {
+    width: 25%;
+}
+
+.claseMargen26 {
+    width: 26%;
+}
+
+.claseMargen28 {
+    width: 28%;
+}
+
+.claseMargen30 {
+    width: 30%;
+}
+
+.claseMargen33{
+    width: 33%;
+}
+
+.claseMargen35 {
+    width: 35%;
+}
+
+.claseMargen39 {
+    width: 39%;
+}
+
+.claseMargen40 {
+    width: 40%;
+}
+
+.claseMargen45 {
+    width: 45%;
+}
+
+.claseMargen50 {
+    width: 50%;
+}
+
+.claseMargen8 {
+    width: 8%;
+}
+
+.claseMargen38 {
+    width: 38%;
+}

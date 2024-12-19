@@ -1,0 +1,68 @@
+$quince: 15px;
+$veinte: 20px;
+$cuarenta: 40px;
+$cero: 0;
+$dos: 2;
+
+$centro: center;
+$cover: cover;
+
+$blanco: #ffffff;
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+    margin: $cero auto;
+    gap: 10px;
+
+    .carta {
+        width: 48%;
+        height: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        background-image: url('../img/foto.jpeg');
+        background-size: $cover;
+        background-position: $centro;
+        box-shadow: $cero 4px 8px rgba($cero, $cero, $cero, 0.3);
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: $cero 8px 16px rgba($cero, $cero, $cero, 0.5);
+        }
+    }
+    
+    .icono {
+        position: absolute;
+        top: $quince;
+        right: $quince;
+        width: $cuarenta;
+        height: $cuarenta;
+        background-image: url('../img/22.jpg');
+        background-size: $cover;
+        background-position: $centro;
+        border-radius: 50%;
+        z-index: $dos;
+    }
+    
+    .nombre {
+        position: absolute;
+        bottom: $cuarenta;
+        left: $veinte;
+        font-size: 24px;
+        color: $blanco;
+        text-shadow: 2px 2px 4px rgba($cero, $cero, $cero, 0.7);
+        z-index: $dos;
+    }
+    
+    .titulo {
+        position: absolute;
+        bottom: $veinte;
+        left: $veinte;
+        font-size: 18px;
+        color: $blanco;
+        text-shadow: 2px 2px 4px rgba($cero, $cero, $cero, 0.7);
+        z-index: $dos;
+    }
+}

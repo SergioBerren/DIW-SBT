@@ -1,0 +1,62 @@
+$negro: black;
+$blanco: white;
+$rojo: red;
+$azul: blue;
+$gris: grey;
+
+$centro: center;
+
+$anchoEncabezado: 50%;
+$anchoContenido: 25%;
+
+$bordeEncabezado: 10px;
+$bordeContenido: 20px;
+
+$absoluto: absolute;
+$relativo: relative;
+
+$porcentaje50: 50%;
+
+body {
+    background-color: $negro;
+    margin: 0;
+    height: 100vh;
+    position: $relativo;
+}
+
+.encabezado {
+    background-color: $blanco;
+    width: $anchoEncabezado;
+    border-radius: $bordeEncabezado;
+    text-align: $centro;
+    position: $absoluto;
+    top: 40%;
+    left: $porcentaje50;
+    transform: translate(-$porcentaje50, -$porcentaje50);
+
+    h1 {
+        color: $azul;
+    }
+}
+
+.contenido {
+    background-color: $blanco;
+    width: $anchoContenido;
+    border-radius: $bordeContenido;
+    text-align: $centro;
+    position: $absoluto;
+    top: 60%;
+    left: $porcentaje50;
+    transform: translate(-$porcentaje50, -$porcentaje50);
+
+    h2 {
+        color: $gris;
+    }
+}
+
+.boton {
+    background-color: $negro;
+    &:hover {
+        background-color: $rojo;
+    }
+}

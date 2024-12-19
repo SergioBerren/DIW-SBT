@@ -1,0 +1,75 @@
+@charset "UTF-8";
+.encabezado {
+  background-color: blue;
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+.encabezado div {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../../img/pokeball.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 2;
+}
+.encabezado .linea {
+  background-color: yellowgreen;
+  display: inline-block;
+}
+
+.navegador {
+  background-color: green;
+}
+.navegador li {
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  width: 33%;
+}
+
+#idDivSeccion1 {
+  background-color: yellow;
+}
+#idDivSeccion1 .seccion {
+  background-color: purple;
+}
+
+#idDivSeccion2 {
+  background-color: red;
+}
+#idDivSeccion2 .seccion {
+  background-color: orange;
+}
+
+.seccion {
+  display: inline-block;
+  height: 350px;
+  width: 25%;
+}
+
+.pie {
+  background-color: aqua;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/*
+$enLinea: inline-block;
+$cero: 0;
+$logo: url('../img/pokeball.png');
+
+
+Título y precio modo texto
+imagen
+enlace (al pulsar te lleva a algo)
+*//*# sourceMappingURL=estilos.css.map */
