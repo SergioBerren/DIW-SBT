@@ -1,0 +1,179 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.4s, color 0.4s;
+  
+  // Estilo predeterminado basado en la variable $light-mode
+  @if $light-mode == true {
+    background-color: $background-light;
+    color: $text-light;
+  } @else {
+    background-color: $background-dark;
+    color: $text-dark;
+  }
+}
+
+/* Estilos para el interruptor de modo */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+/* Ocultar el checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* El deslizador */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+/* El círculo del deslizador */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+/* Las imágenes dentro del botón */
+.sun, .moon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* Sol a la izquierda */
+.sun {
+  left: 10px;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+/* Luna a la derecha */
+.moon {
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+/* Cuando el interruptor está marcado (modo noche) */
+input:checked + .slider {
+  background-color: #183153;
+}
+
+/* Cuando el interruptor está marcado, mueve el círculo y las imágenes */
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* Ocultar el sol y mostrar la luna cuando el interruptor está marcado */
+input:checked + .slider .sun {
+  opacity: 0;
+}
+
+input:checked + .slider .moon {
+  opacity: 1;
+}
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Twinti</title>
+  <link rel="stylesheet" href="/DIW-SBT/Segundo Trimestre/Sass/RedSocial/css/Inicio/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Twinti</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Mensajes</a></li>
+          <li><a href="#">Amigos</a></li>
+          <li><a href="#">Notificaciones</a></li>
+          <li><a href="#">Perfil</a></li>
+        </ul>
+      </nav>
+      <!-- Checkbox para el modo día/noche -->
+      <label class="switch">
+        <input type="checkbox" id="theme-switch">
+        <span class="slider"></span>
+        <div class="sun">
+          <img src="img/SolSonriente.png" alt="Sol">
+        </div>
+        <div class="moon">
+          <img src="img/LunaSonriente.png" alt="Luna">
+        </div>
+      </label>
+    </div>
+  </header>
+  
+  <!-- Contenedor temático que controla el fondo y los colores -->
+  <div class="theme-container">
+    <main class="main">
+      <div class="feed">
+        <div class="post">
+          <div class="user-info">
+            <img src="img/GrupoPersonas.jpg" alt="Avatar del usuario Pepito Pérez" class="avatar">
+            <span class="username">Pepito Pérez</span>
+          </div>
+          <p class="content">¡Hola a todos! Hoy es un gran día 😊</p>
+          <div class="actions">
+            <button>Me gusta</button>
+            <button>Comentar</button>
+          </div>
+        </div>
+        <div class="post">
+          <div class="user-info">
+            <img src="img/GrupoPersonas2.jpg" alt="Avatar del usuario" class="avatar">
+            <span class="username">María Gómez</span>
+          </div>
+          <p class="content">Aquí les dejo una foto del fin de semana:</p>
+          <img src="img/GrupoPersonas3.jpg" alt="Foto del usuario" class="post-image">
+          <div class="actions">
+            <button>Me gusta</button>
+            <button>Comentar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  
+    <footer class="footer">
+      <p>&copy; 2025 Twinti Inspired by Tuenti</p>
+    </footer>
+  </div>
+</body>
+</html>

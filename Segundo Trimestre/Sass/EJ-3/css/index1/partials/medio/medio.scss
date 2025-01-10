@@ -1,19 +1,39 @@
-#idDivSeccion1 {
-    background-color: yellow;
-    .seccion {
-        background-color: purple;
-    }
+main.medio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    grid-template-rows: repeat(2, 1fr);  /* 2 filas iguales */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-#idDivSeccion2 {
-    background-color: red;
-    .seccion {
-        background-color: orange;
-    }
-}
-
+/* Cada sección ocupa su espacio dentro del grid */
 .seccion {
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el encabezado */
+.seccion h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Espaciado dentro de cada sección */
+.seccion div {
+    height: 50px;
+    background-color: #e0e0e0;
+    margin: 10px 0;
+}
+
+.seccion a {
     display: inline-block;
-    height: 350px;
-    width: 25%;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
 }
