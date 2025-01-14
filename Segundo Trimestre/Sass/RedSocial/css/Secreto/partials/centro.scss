@@ -1,0 +1,100 @@
+@import '../../Comun/variables/variables.scss';
+// Variables
+
+
+// Estilos generales
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $fuente;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-width: 320px;
+}
+
+// Página principal
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+// Mixin para imagen responsiva
+@mixin responsive-image($width, $height, $small-width: null, $small-height: null) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  border-radius: 50%;
+  
+  @if $small-width != null and $small-height != null {
+    @media (max-width: 600px) {
+      width: $small-width;
+      height: $small-height;
+    }
+  }
+}
+
+// Función para color de texto
+@function text-color($state: normal) {
+  @if $state == 'normal' {
+    @return $color-texto;
+  }
+  @else if $state == 'dark' {
+    @return darken($color-texto, 50%);
+  }
+  @else {
+    @return $color-texto;
+  }
+}
+
+// Tarjeta principal
+.card {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  
+  &__image {
+    @include responsive-image(200px, 200px, 150px, 150px);
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 20px;
+    color: text-color('normal');
+    margin: 10px 0;
+    
+    @media (max-width: 600px) {
+      font-size: 16px;
+      color: text-color('dark');
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .page {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 280px;
+  }
+}

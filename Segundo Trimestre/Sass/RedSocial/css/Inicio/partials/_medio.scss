@@ -1,0 +1,74 @@
+.feed {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 70px; // Este margen asegura que haya espacio para el footer
+  
+    .post {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+      .user-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+  
+        .avatar {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 10px;
+        }
+  
+        .username {
+          font-weight: bold;
+          font-size: 16px;
+          color: #333;
+        }
+      }
+  
+      .content {
+        font-size: 14px;
+        color: #555;
+        margin: 10px 0;
+      }
+  
+      .post-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin: 10px 0;
+      }
+  
+      .actions {
+        display: flex;
+        gap: 10px;
+  
+        button {
+          padding: 8px 12px;
+          font-size: 14px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #45A049;
+          }
+        }
+      }
+    }
+  
+    // Ajuste específico para la última imagen
+    .post:nth-child(2) .post-image {
+      width: 50%; // Cambia el tamaño al 50% del ancho contenedor
+      margin: 0 auto; // Centra la imagen dentro del post
+      display: block;
+    }
+  }
+  
