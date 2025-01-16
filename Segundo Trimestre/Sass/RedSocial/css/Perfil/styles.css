@@ -26,7 +26,6 @@
 .header .container .nav ul li a {
   text-decoration: none;
   color: #fff;
-  text-decoration: none;
   font-weight: 500;
 }
 .header .container .nav ul li a:hover {
@@ -35,6 +34,46 @@
 .header .container .nav ul li a.oculto {
   color: #0078d4;
   font-style: "Arial", sans-serif;
+}
+@media (max-width: 1024px) {
+  .header .container {
+    width: 95%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header .nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .header .logo {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .header .container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .header .logo {
+    font-size: 1.1rem;
+  }
+  .header .nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    width: 100%;
+  }
+  .header .nav ul li {
+    text-align: left;
+  }
+}
+@media (max-width: 480px) {
+  .header .logo {
+    font-size: 1rem;
+  }
+  .header .nav ul {
+    gap: 0.5rem;
+  }
 }
 
 /* Estilos generales */
@@ -149,6 +188,224 @@ input:checked + .slider .moon {
 
 /* Aplica el modo oscuro cuando el checkbox está marcado */
 /* Aplica el modo claro cuando el checkbox está desmarcado */
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* Estilos para el modo claro */
+body.light-mode, input:not(:checked) ~ body {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode, input:checked ~ body {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+/* Contenedor principal */
+.theme-container {
+  padding: 2rem;
+}
+
+/* Perfil */
+.profile {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile__card {
+  text-align: center;
+}
+
+.profile__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.profile__name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile__description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.profile__actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn--primary {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+}
+
+.btn--primary:hover {
+  background-color: #2980b9;
+}
+
+.btn--secondary {
+  background-color: #95a5a6;
+  color: #fff;
+  border: none;
+}
+
+.btn--secondary:hover {
+  background-color: #7f8c8d;
+}
+
+.profile__details {
+  margin-top: 2rem;
+}
+
+.profile__details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.profile__details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile__details li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para el interruptor de modo */
+.switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #183153;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+input:checked + .slider .sun {
+  opacity: 0;
+}
+
+input:checked + .slider .moon {
+  opacity: 1;
+}
+
+/* Media Queries para hacerlo responsive */
+@media (max-width: 768px) {
+  .profile {
+    padding: 1.5rem;
+  }
+  .profile__image {
+    width: 120px;
+    height: 120px;
+  }
+  .profile__name {
+    font-size: 1.8rem;
+  }
+  .profile__description {
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 0.6rem 1.5rem;
+  }
+  .profile__details h3 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 480px) {
+  .profile__name {
+    font-size: 1.5rem;
+  }
+  .profile__description {
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 0.5rem 1.2rem;
+  }
+  .profile__details h3 {
+    font-size: 1.2rem;
+  }
+  .switch {
+    width: 50px;
+    height: 30px;
+  }
+  .slider:before {
+    height: 22px;
+    width: 22px;
+  }
+}
 .footer {
   background-color: #333;
   color: #fff;
