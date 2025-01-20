@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('img/CineAbandonado3.jpeg'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajustamos el tamaño de la imagen para que cubra toda la página */
+  background-position: center; /* Centramos la imagen */
+  background-size: cover;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.error-container {
+  text-align: center;
+}
+
+.film-container {
+  position: relative;
+  display: inline-block;
+}
+
+.film-reel {
+  width: 100px;
+  height: 100px;
+  background: url('img/CarreteCine.png') center center no-repeat;
+  background-size: contain;
+  animation: reelAnimation 2s linear infinite;
+}
+
+.error-code-left,
+.error-code-right {
+  position: absolute;
+  top: 0%;
+  font-size: 80px;
+  transform: rotate(5deg);
+}
+
+.error-code-left {
+  left: -50px;
+}
+
+.error-code-right {
+  right: -50px;
+}
+
+.camera {
+  position: absolute;
+  top: 0%;
+  left: -300px; /* Ajustamos más a la izquierda */
+  transform: translate(-50%, -50%) perspective(500px) rotateX(40deg);
+}
+
+.camera img {
+  width: 180px; /* Aumentamos el tamaño de la imagen */
+}
+
+.luz {
+  position: absolute;
+  top: -10%;
+  left: 60%;
+  z-index: -1;
+  animation: luz 2s linear infinite;
+}
+
+.texto {
+  background-color: black;
+  transform: rotate(5deg);
+  position: absolute;
+  right: 40%;
+  top: 53%;
+}
+
+@keyframes reelAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+@keyframes luz {
+  0% {
+    opacity: 0.5;
+    transform: rotate(-65deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(-65deg);
+  }
+  100% {
+    opacity: 0.5;
+    transform: rotate(-65deg);
+  }
+}
